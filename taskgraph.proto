@@ -1,0 +1,25 @@
+package TaskGraph;
+
+
+message Task {
+	required int32 id = 1;
+	required string name = 2;
+	required int32 wcet = 3;
+	optional int32 sync = 4;
+};
+
+message Dependency {
+	required string fromTask = 1;
+	required string toTask = 2;
+	required int32 exchangedData = 3;
+};
+
+message Graph {
+	required int32 maxWcet = 1;
+	required int32 minWcet = 2;
+	required int32 maxExchangedData = 3;
+	required int32 minExchangedData = 4;
+	repeated Task tasks = 5;
+	repeated Dependency dependencies = 6;
+};
+
