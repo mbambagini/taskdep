@@ -28,10 +28,12 @@ How to
 ======
 
 Re-generate source files for the serialization:
-    make gen
-  
+      make gen
+
+
+
 Compile:
-    make
+      make
 
 
 Other software
