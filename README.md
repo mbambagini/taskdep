@@ -29,17 +29,17 @@ How to
 
 Re-generate source files for the serialization:
 
-'''
+```
 make gen
-'''
+```
 
 
 
 Compile:
 
-_
+___
 make
-_
+___
 
 
 Other software
