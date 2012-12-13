@@ -27,6 +27,11 @@ Suggested software:
 How to
 ======
 
+Re-generate source files for the serialization
+  make gen
+Compile:
+  make
+
 
 Other software
 =============
