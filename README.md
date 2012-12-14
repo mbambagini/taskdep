@@ -18,6 +18,7 @@ Example
 
 Let us consider two examples, obtained by using the CODE-STYLE algorithm.
 
+![first example](example1.png))
 The first one (./example1.png) contains 30 real tasks (without considering
 synchronization points) with a probability 0.5 (within [0.0, 1.0]) of
 having either a parallel or sequential execution.
