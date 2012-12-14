@@ -13,6 +13,19 @@ A task is formally defined by:
   start not earlier than the end of task a.
 
 
+Example
+=======
+
+Let us consider two examples, obtained by using the CODE-STYLE algorithm.
+
+The first one (./example1.png) contains 30 real tasks (without considering
+synchronization points) with a probability 0.5 (within [0.0, 1.0]) of
+having either a parallel or sequential execution.
+
+The second example (./example2.png) contains 10 real task and probability 0.7
+(parallel executions are more probable than sequential ones).
+
+
 Required packages
 =================
 
@@ -35,7 +48,6 @@ make
 Once the software has been compiled, execute:
 ```
 ./software --binaryFile BINARY_OUTPUT_FILE [OPTIONS]
-                        ==================
 ```
 where:
 - binaryFile: Binary file with the generated task graph (string)
@@ -50,21 +62,28 @@ where:
 - nOfTasks (Number of tasks) type: int32 default: 15
 - probSeqPar (Ser/Par probability [0, 1]) type: double default: 0.5
 - taskGenerator: Task generator to use:
--- 0: code-style generator
+-- 0: code-style generator (SUGGESTED ALGORITHM)
 -- 1: data-flow generator												1
+
+A script has been provided to make the use easier.
+It automatically generate the binary file and the png image.
+```
+./script.sh [GENERATIONNAME]
+```
+Suppose you type:
+___
+./script example
+___
+The following files are generated
+- example.bin: serialized tash graph (using the Protobuf library)
+- example.txt: plain text task graph description
+- example.dot: task graph representation using DOT language
+- example.png: graphical representation of the task graph (using dot command)
 
 In case you want to regenerate source files for the serialization:
 ```
 make gen
 ```
-
-
-
-Compile:
-
-___
-make
-___
 
 
 Other software
