@@ -14,15 +14,15 @@ A task is formally defined by:
 
 The software implements two different generators.
 The first algorithm is called CODESTYLE generator and basically does:
-# divide the actual task set into two groups
-# decide randomly how to execute the two group: in parallel or sequentially
-# repeat recursevely step 1 for the two groups
+1. divide the actual task set into two groups
+2. decide randomly how to execute the two group: in parallel or sequentially
+3. repeat recursevely step 1 for the two groups
 The execution flow of the second algorithm is the following:
-# generate the task set
-# pick a task from the task set
-# pick a second task from the neighborhood of the first task
-# create a dependency between them
-# repeat step 2 until the number of desired dependencies is reached
+1. generate the task set
+2. pick a task from the task set
+3. pick a second task from the neighborhood of the first task
+4. create a dependency between them
+5. repeat step 2 until the number of desired dependencies is reached
 
 Example
 =======
