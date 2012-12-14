@@ -19,6 +19,8 @@ The first algorithm is called CODESTYLE generator and basically does:
 2. decide randomly how to execute the two groups: in parallel or sequentially
 3. repeat recursively step 1 for the two groups
 
+See the last section for two examples.
+
 The execution flow of the second algorithm (DATA-FLOW generator) is the
 following:
 
