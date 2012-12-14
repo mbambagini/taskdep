@@ -9,8 +9,8 @@ A task is formally defined by:
   features each task
 - vertices, representing precedence constraints among tasks. Each of them is
   characterized by the amount of exchanged data.
-  Such dependencies are represented as: a -> b. Meaning that the task b must
-  start not earlier than the end of task a.
+  Such dependencies are represented as: A -> B. Meaning that the task B must
+  start not earlier than the end of task A.
 
 The software implements two different generators.
 The first algorithm is called CODESTYLE generator and basically does:
@@ -19,7 +19,8 @@ The first algorithm is called CODESTYLE generator and basically does:
 2. decide randomly how to execute the two group: in parallel or sequentially
 3. repeat recursevely step 1 for the two groups
 
-The execution flow of the second algorithm (DATA-FLOW generator) is the following:
+The execution flow of the second algorithm (DATA-FLOW generator) is the
+following:
 
 1. generate the task set
 2. pick a task from the task set
@@ -32,12 +33,13 @@ Example
 
 Let us consider two examples, obtained by using the CODE-STYLE algorithm.
 
-The first one (![first example](example1.png)) contains 30 real tasks (without considering
-synchronization points) with a probability 0.5 (within [0.0, 1.0]) of
-having either a parallel or sequential execution.
+The first one (![first example](example1.png)) contains 30 real tasks
+(without considering synchronization points) with a probability 0.5 (within
+[0.0, 1.0]) of having either a parallel or sequential execution.
 
-The second example (![second example](example2.png)) contains 10 real task and probability 0.7
-(parallel executions are more probable than sequential ones).
+The second example (![second example](example2.png)) contains 10 real task
+and probability 0.7 (parallel executions are more probable than sequential
+ones).
 
 
 Required packages
@@ -92,7 +94,8 @@ The following files are generated
 - example.bin: serialized tash graph (using the Protobuf library)
 - example.txt: plain text task graph description
 - example.dot: task graph representation using DOT language
-- example.png: graphical representation of the task graph (using dot command)
+- example.png: graphical representation of the task graph (using dot
+command)
 
 In case you want to regenerate source files for the serialization:
 ```
