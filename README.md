@@ -16,8 +16,8 @@ The software implements two different generators.
 The first algorithm is called CODESTYLE generator and basically does:
 
 1. divide the actual task set into two groups
-2. decide randomly how to execute the two group: in parallel or sequentially
-3. repeat recursevely step 1 for the two groups
+2. decide randomly how to execute the two groups: in parallel or sequentially
+3. repeat recursively step 1 for the two groups
 
 The execution flow of the second algorithm (DATA-FLOW generator) is the
 following:
