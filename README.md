@@ -78,8 +78,8 @@ where:
 - nOfTasks (Number of tasks) type: int32 default: 15
 - probSeqPar (Ser/Par probability [0, 1]) type: double default: 0.5
 - taskGenerator: Task generator to use:
-> 0: code-style generator (SUGGESTED ALGORITHM)
-> 1: data-flow generator												1
+  0: code-style generator (SUGGESTED ALGORITHM)
+  1: data-flow generator
 
 A script has been provided to make the use easier.
 It automatically generate the binary file and the png image.
