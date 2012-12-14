@@ -85,9 +85,9 @@ It automatically generate the binary file and the png image.
 ./script.sh [GENERATIONNAME]
 ```
 Suppose you type:
-___
+```
 ./script example
-___
+```
 The following files are generated
 - example.bin: serialized tash graph (using the Protobuf library)
 - example.txt: plain text task graph description
