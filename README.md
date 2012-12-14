@@ -12,18 +12,28 @@ A task is formally defined by:
   Such dependencies are represented as: a -> b. Meaning that the task b must
   start not earlier than the end of task a.
 
+The software implements two different generators.
+The first algorithm is called CODESTYLE generator and basically does:
+# divide the actual task set into two groups
+# decide randomly how to execute the two group: in parallel or sequentially
+# repeat recursevely step 1 for the two groups
+The execution flow of the second algorithm is the following:
+# generate the task set
+# pick a task from the task set
+# pick a second task from the neighborhood of the first task
+# create a dependency between them
+# repeat step 2 until the number of desired dependencies is reached
 
 Example
 =======
 
 Let us consider two examples, obtained by using the CODE-STYLE algorithm.
 
-![first example](example1.png))
-The first one (./example1.png) contains 30 real tasks (without considering
+The first one (![first example](example1.png)) contains 30 real tasks (without considering
 synchronization points) with a probability 0.5 (within [0.0, 1.0]) of
 having either a parallel or sequential execution.
 
-The second example (./example2.png) contains 10 real task and probability 0.7
+The second example (![second example](example2.png)) contains 10 real task and probability 0.7
 (parallel executions are more probable than sequential ones).
 
 
