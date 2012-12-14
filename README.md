@@ -33,13 +33,16 @@ Example
 
 Let us consider two examples, obtained by using the CODE-STYLE algorithm.
 
-The first one (![first example](example1.png)) contains 30 real tasks
-(without considering synchronization points) with a probability 0.5 (within
-[0.0, 1.0]) of having either a parallel or sequential execution.
+The first one
+(![first example](https://raw.github.com/mbambagini/taskdep/master/example1.png))
+contains 30 real tasks (without considering synchronization points) with a
+probability 0.5 (within [0.0, 1.0]) of having either a parallel or
+sequential execution.
 
-The second example (![second example](example2.png)) contains 10 real task
-and probability 0.7 (parallel executions are more probable than sequential
-ones).
+The second example
+(![second example](https://raw.github.com/mbambagini/taskdep/master/example2.png))
+contains 10 real task and probability 0.7 (parallel executions are more
+probable than sequential ones).
 
 
 Required packages
