@@ -100,6 +100,7 @@ command)
 In case you want to regenerate source files for the serialization:
 ```
 make gen
+make
 ```
 
 
