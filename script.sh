@@ -17,7 +17,7 @@ maxData=200
 minData=100
 
 ########## TASK NUMBER
-tasks=30
+tasks=10
 
 ########## IF GEN==0
 #prob=0.0 #fully sequential
@@ -26,7 +26,7 @@ prob=0.5
 ##########
 
 ########## USEFUL IF GEN==1
-deps=15
+deps=10
 distance=5
 ##########
 
