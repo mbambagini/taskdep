@@ -19,6 +19,8 @@ The first algorithm is called CODESTYLE generator and basically does:
 2. decide randomly how to execute the two groups: in parallel or sequentially
 3. repeat recursively step 1 for the two groups
 
+See the last section for two examples.
+
 The execution flow of the second algorithm (DATA-FLOW generator) is the
 following:
 
@@ -27,19 +29,6 @@ following:
 3. pick a second task from the neighborhood of the first task
 4. create a dependency between them
 5. repeat step 2 until the number of desired dependencies is reached
-
-Example
-=======
-
-Let us consider two examples, obtained by using the CODE-STYLE algorithm.
-
-The first one (![first example](example1.png)) contains 30 real tasks
-(without considering synchronization points) with a probability 0.5 (within
-[0.0, 1.0]) of having either a parallel or sequential execution.
-
-The second example (![second example](example2.png)) contains 10 real task
-and probability 0.7 (parallel executions are more probable than sequential
-ones).
 
 
 Required packages
@@ -112,3 +101,19 @@ Alternative software that you would like to test:
 - STG: http://www.kasahara.elec.waseda.ac.jp/schedule/
 - TaskGraphGenerator: http://sourceforge.net/projects/taskgraphgen/
 - http://ai.unibo.it/node/410
+
+
+Example
+=======
+
+Let us consider two examples, obtained by using the CODE-STYLE algorithm.
+
+The first one contains 30 real tasks (without considering synchronization
+points) with a probability 0.5 (within [0.0, 1.0]) of having either a
+parallel or sequential execution.
+![first example](https://raw.github.com/mbambagini/taskdep/master/example1.png)
+
+
+The second example contains 10 real task and probability 0.7 (parallel
+executions are more probable than sequential ones).
+![second example](https://raw.github.com/mbambagini/taskdep/master/example2.png)
