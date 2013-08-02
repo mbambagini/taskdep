@@ -17,7 +17,7 @@ maxData=200
 minData=100
 
 ########## TASK NUMBER
-tasks=10
+tasks=20
 
 ########## IF GEN==0
 #prob=0.0 #fully sequential
