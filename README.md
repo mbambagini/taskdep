@@ -1,11 +1,11 @@
 Introduction
 ============
 
-This tool generates task graph, modeling precedence constraints among tasks
+This tool generates task graphs, modeling precedence constraints among tasks
 and communication requirements.
 
 A task is formally defined by:
-- edges, representing tasks. A specific worst-case computational time
+- edges, representing tasks. A specific worst-case execution time
   features each task
 - vertices, representing precedence constraints among tasks. Each of them is
   characterized by the amount of exchanged data.
@@ -13,17 +13,15 @@ A task is formally defined by:
   start not earlier than the end of task A.
 
 The software implements two different generators.
-The first algorithm is called CODESTYLE generator and basically does:
 
+The first algorithm is called CODESTYLE generator and basically does:
 1. divide the actual task set into two groups
 2. decide randomly how to execute the two groups: in parallel or sequentially
 3. repeat recursively step 1 for the two groups
-
 See the last section for two examples.
 
 The execution flow of the second algorithm (DATA-FLOW generator) is the
 following:
-
 1. generate the task set
 2. pick a task from the task set
 3. pick a second task from the neighborhood of the first task
@@ -79,7 +77,7 @@ Suppose you type:
 ```
 ./script example
 ```
-The following files are generated
+then, the following files are generated
 - example.bin: serialized tash graph (using the Protobuf library)
 - example.txt: plain text task graph description
 - example.dot: task graph representation using DOT language
@@ -108,12 +106,12 @@ Example
 
 Let us consider two examples, obtained by using the CODE-STYLE algorithm.
 
-The first one contains 30 real tasks (without considering synchronization
+The first one contains 30 tasks (without considering synchronization
 points) with a probability 0.5 (within [0.0, 1.0]) of having either a
 parallel or sequential execution.
 ![first example](https://raw.github.com/mbambagini/taskdep/master/example1.png)
 
 
-The second example contains 10 real task and probability 0.7 (parallel
+The second example contains 10 tasks and probability 0.7 (parallel
 executions are more probable than sequential ones).
 ![second example](https://raw.github.com/mbambagini/taskdep/master/example2.png)
